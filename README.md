@@ -1,5 +1,5 @@
 * Build
-- cmake -S . -B build
+    - cmake -S . -B build
 * Compile/Link
-- cd build
-- make
+    - cd build
+    - make
