@@ -1,6 +1,9 @@
 # Exclude build directory.
 build
 
+# Exclude VS code config files
+.vscode
+
 # Exclude build files in the deb directory. Only allow the control file.
 debian/*
 !debian/control

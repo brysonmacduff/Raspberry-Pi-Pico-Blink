@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.13)
 
 # initialize the SDK based on PICO_SDK_PATH
 
+set(PICO_BOARD pico_w)
 set(PICO_SDK_PATH "${CMAKE_SOURCE_DIR}/pico-sdk")
 
 # note: this must happen before project()
@@ -19,7 +20,7 @@ add_executable(${PROJECT_NAME}
 )
 
 # Add pico_stdlib library which aggregates commonly used features
-target_link_libraries(${PROJECT_NAME} pico_stdlib)
+target_link_libraries(${PROJECT_NAME} pico_stdlib pico_cyw43_arch_none)
 
 # create map/bin/hex/uf2 file in addition to ELF.
 pico_add_extra_outputs(${PROJECT_NAME})
